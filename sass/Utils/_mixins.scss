@@ -1,0 +1,30 @@
+@mixin txt-big {
+  font-family: "robotomedium";
+  font-size: 160%;
+  font-weight: 900;
+}
+@mixin txt-medium {
+  font-family: "robotomedium";
+  font-weight: 800;
+}
+@mixin txt-small {
+  font-family: "robotomedium";
+  font-weight: 600;
+}
+@mixin txt-thin {
+  font-family: "robotothin";
+  font-size: 100%;
+}
+@mixin txt-secondary {
+  font-family: "shrikhandregular";
+}
+@mixin button {
+  font-size: 120%;
+  color: white;
+  width: 280px;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  border-radius: 50px;
+}

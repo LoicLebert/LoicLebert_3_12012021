@@ -1,0 +1,40 @@
+#location {
+  @include txt-small;
+  width: 100%;
+  height: 3em;
+  background-color: rgb(228, 228, 228);
+  box-shadow: inset 0 7px 10px -7px rgb(207, 207, 207);
+  color: rgb(48, 48, 48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  p {
+    text-align: center;
+  }
+}
+#exploration {
+  width: 100%;
+  height: 320px;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2em;
+  gap: 1em;
+  .btn {
+    margin-top: 1em;
+  }
+  h1 {
+    @include txt-big;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+  }
+  h2 {
+    @include txt-thin;
+    font-size: 120%;
+    text-align: center;
+  }
+}
