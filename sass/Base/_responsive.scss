@@ -1,6 +1,28 @@
 @media #{$desktop-medium} {
-  aside,
   #restaurants {
     align-items: center;
+  }
+  #cards {
+    align-self: center;
+  }
+  a {
+    align-self: center;
+  }
+  #menu-title-text {
+    justify-content: center !important;
+    gap: 4em;
+  }
+  .menu-card {
+    width: 100%;
+  }
+  #menu {
+    width: 100%;
+    align-items: center;
+  }
+  #starters,
+  #dish,
+  #desserts {
+    max-width: 1200px;
+    width: 100%;
   }
 }

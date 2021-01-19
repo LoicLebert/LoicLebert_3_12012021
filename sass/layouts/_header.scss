@@ -4,4 +4,22 @@ header {
   background-color: white;
   text-align: center;
   padding: 1.2em;
+  img {
+    width: 170px;
+    height: auto;
+  }
+}
+#menu-header {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  a {
+    color: rgb(48, 48, 48);
+    position: absolute;
+    left: 30px;
+  }
 }

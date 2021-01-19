@@ -1,0 +1,9 @@
+#restaurants a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
+}
