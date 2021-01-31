@@ -9,8 +9,22 @@
   color: black;
 }
 
+footer a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+footer a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 @media only screen and (min-width: 769px) {
   #restaurants {
+    align-items: center;
+  }
+
+  aside {
     align-items: center;
   }
 
@@ -433,6 +447,247 @@ figure img {
   width: 50px;
   border-top: 4px solid #99e2d0;
   display: block;
+}
+
+/* === Loading spinner === */
+.spinner-background {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0.1s ease-out 2.5s 1 forwards move_out;
+}
+
+@keyframes move_out {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+    opacity: 0;
+    display: none;
+  }
+}
+.spinner {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-size: 100%;
+  animation: rotate 1s infinite linear;
+}
+
+.spinner::after {
+  content: "";
+  display: block;
+  width: 86%;
+  height: 86%;
+  margin: 7%;
+  background: #fff;
+  border-radius: 100%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* === Favorite animation === */
+.hearts .far {
+  position: absolute;
+}
+.hearts .fas {
+  position: relative;
+  opacity: 0;
+  color: #9356dc !important;
+}
+
+.fas:hover {
+  animation: filling 1s ease-in forwards;
+}
+
+@keyframes filling {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* === Cards loading animation === */
+.card1 {
+  position: relative;
+  animation: loading1 1.5s forwards;
+}
+
+@keyframes loading1 {
+  from {
+    opacity: 0;
+    bottom: -20px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card2 {
+  position: relative;
+  animation: loading2 1.5s forwards;
+}
+
+@keyframes loading2 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  10% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card3 {
+  position: relative;
+  animation: loading3 1.5s forwards;
+}
+
+@keyframes loading3 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  20% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card4 {
+  position: relative;
+  animation: loading4 1.5s forwards;
+}
+
+@keyframes loading4 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  30% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card5 {
+  position: relative;
+  animation: loading5 1.5s forwards;
+}
+
+@keyframes loading5 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  40% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card6 {
+  position: relative;
+  animation: loading6 1.5s forwards;
+}
+
+@keyframes loading6 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  50% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card7 {
+  position: relative;
+  animation: loading7 1.5s forwards;
+}
+
+@keyframes loading7 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  60% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card8 {
+  position: relative;
+  animation: loading8 1.5s forwards;
+}
+
+@keyframes loading8 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  70% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+.card9 {
+  position: relative;
+  animation: loading9 1.5s forwards;
+}
+
+@keyframes loading9 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  80% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

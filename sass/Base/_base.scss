@@ -7,3 +7,12 @@
     color: black;
   }
 }
+footer a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
+}
