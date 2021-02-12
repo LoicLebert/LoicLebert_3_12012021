@@ -75,6 +75,14 @@ footer a:visited {
   font-weight: normal;
   font-style: normal;
 }
+i:not(.full-heart) {
+  color: #646464;
+}
+
+body {
+  text-overflow: ellipsis;
+}
+
 .btn {
   font-size: 120%;
   color: white;
@@ -218,7 +226,6 @@ aside h2 {
 }
 .step-card i {
   margin-left: 2em;
-  color: #646464;
 }
 .step-card h3 {
   margin-left: 2em;
@@ -265,13 +272,17 @@ h3 {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: #f7f7f7;
   overflow: hidden;
   box-shadow: 0px 5px 10px 0px lightgray;
   width: 100%;
   max-width: 1400px;
   height: 15rem;
   border-radius: 20px;
+}
+.card:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px #bebebe;
 }
 .card img {
   object-fit: cover;
@@ -290,7 +301,6 @@ h3 {
 }
 .card .card-txt i {
   font-size: 150%;
-  color: #646464;
 }
 
 footer {
@@ -506,10 +516,9 @@ figure img {
 .hearts .fas {
   position: relative;
   opacity: 0;
-  color: #9356dc !important;
+  color: #9356dc;
 }
-
-.fas:hover {
+.hearts .fas:hover {
   animation: filling 1s ease-in forwards;
 }
 
@@ -688,6 +697,97 @@ figure img {
     opacity: 1;
     bottom: 0;
   }
+}
+.card10 {
+  position: relative;
+  animation: loading10 1.5s forwards;
+}
+
+@keyframes loading10 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  90% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+/* === Validation animation === */
+.menu-card {
+  position: relative;
+  background-color: #f7f7f7;
+  transition: width;
+  transition-duration: 1s;
+  margin-right: 0px;
+  text-overflow: ellipsis;
+}
+.menu-card:hover {
+  background-color: #ffffff;
+  width: calc(100% - 100px);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.menu-card:hover .menu-card__bg {
+  right: -100px;
+  width: 100px;
+  height: 80px;
+  background-color: #99e2d0;
+}
+
+.menu-card__bg {
+  width: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99e2d0;
+  transition: width 1s, right 1s;
+}
+
+.full-card {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: 0px 5px 10px 0px lightgray;
+}
+.full-card:hover {
+  box-shadow: 0px 5px 10px 0px #bebebe;
+}
+.full-card:hover .checkmark {
+  animation: rotate 1s forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: -70px;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkmark i {
+  color: #99e2d0;
+  font-size: 200%;
 }
 
 /*# sourceMappingURL=style.css.map */

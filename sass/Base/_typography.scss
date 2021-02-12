@@ -20,3 +20,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+i:not(.full-heart) {
+  color: $icon-color-main;
+}
+
+body {
+  text-overflow: ellipsis;
+}

@@ -49,7 +49,6 @@ aside {
   }
   i {
     margin-left: 2em;
-    color: rgb(100, 100, 100);
   }
   h3 {
     margin-left: 2em;
@@ -88,13 +87,17 @@ h3 {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(247, 247, 247);
   overflow: hidden;
   box-shadow: $box-shadow;
   width: 100%;
   max-width: 1400px;
   height: 15rem;
   border-radius: 20px;
+  &:hover {
+    background-color: #ffffff;
+    box-shadow: $box-shadow-darker;
+  }
   img {
     object-fit: cover;
     height: 70%;
@@ -110,7 +113,6 @@ h3 {
     margin: 1em;
     i {
       font-size: 150%;
-      color: rgb(100, 100, 100);
     }
   }
 }
@@ -190,7 +192,7 @@ figure img {
   }
 }
 .menu-card {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 80px;
   border-radius: 20px;
   display: flex;
@@ -298,12 +300,11 @@ figure img {
   .fas {
     position: relative;
     opacity: 0;
-    color: #9356dc(!important);
+    color: #9356dc;
+    &:hover {
+      animation: filling 1s ease-in forwards;
+    }
   }
-}
-
-.fas:hover {
-  animation: filling 1s ease-in forwards;
 }
 
 @keyframes filling {
@@ -488,5 +489,96 @@ figure img {
   100% {
     opacity: 1;
     bottom: 0;
+  }
+}
+
+.card10 {
+  position: relative;
+  animation: loading10 1.5s forwards;
+}
+
+@keyframes loading10 {
+  0% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  90% {
+    opacity: 0;
+    bottom: -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+/* === Validation animation === */
+
+.menu-card {
+  position: relative;
+  background-color: rgb(247, 247, 247);
+  transition: width;
+  transition-duration: 1s;
+  margin-right: 0px;
+  text-overflow: ellipsis;
+  &:hover {
+    background-color: #ffffff;
+    width: calc(100% - 100px);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    .menu-card__bg {
+      right: -100px;
+      width: 100px;
+      height: 80px;
+      background-color: #99e2d0;
+    }
+  }
+}
+.menu-card__bg {
+  width: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99e2d0;
+  transition: width 1s, right 1s;
+}
+.full-card {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: $box-shadow;
+  &:hover {
+    box-shadow: $box-shadow-darker;
+    .checkmark {
+      animation: rotate 1s forwards;
+    }
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.checkmark {
+  position: absolute;
+  top: 15px;
+  right: -70px;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    color: #99e2d0;
+    font-size: 200%;
   }
 }
