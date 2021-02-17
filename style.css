@@ -166,6 +166,11 @@ header img {
   text-align: center;
 }
 
+header h1 {
+  font-family: "shrikhandregular";
+  font-size: 2rem;
+}
+
 aside {
   margin: 2em;
   height: 350px;

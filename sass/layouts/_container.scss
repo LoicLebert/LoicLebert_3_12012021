@@ -1,3 +1,9 @@
+header {
+  h1 {
+    @include txt-secondary;
+    font-size: 2rem;
+  }
+}
 aside {
   margin: $margin;
   height: 350px;
